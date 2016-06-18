@@ -3,11 +3,53 @@
     position: relative;
 }
 form {
-    padding: 30px;
+    vertical-align: middle;
+    padding: 3px;
     position: absolute;
-    max-height: 500px;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    height: 150px;
     max-width: 400px;
     width: 100%;
-    height: 100%;
 }
-html { background:#333}
+body {
+    min-height: 100vh;
+}
+form > input {
+    padding: 0px;
+    box-sizing: border-box;
+    display: inline-block;
+    text-indent: 18px;
+    margin-top: 4px;
+    width: 100%;
+    height: 50px;
+    border: 2px solid rgba(0,0,0,0);
+    border-bottom:none;
+    outline: none;
+    transition: border 0.2s ease;
+}
+.lip {
+    background: #BBB;
+    height: 3px;
+    margin-bottom: 4px;
+}
+#lip2 {
+    background: #777;
+}
+form > input:hover, form > input:focus {
+    border: 2px solid #BBB;
+    border-bottom:none;
+}
+form > input[type="submit"]:hover, form > input[type="submit"]:focus {
+    border: 2px solid #777;
+    border-bottom:none;
+}
+form > input[type="submit"] {
+    background-color: #AAA
+}
+html {
+    background: #272429;
+}
