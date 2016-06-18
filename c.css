@@ -53,3 +53,16 @@ form > input[type="submit"] {
 html {
     background: #272429;
 }
+#noti {
+    position: fixed;
+    top: -40px;
+    left: 0px;
+    right: 0px;
+    background: rgba(255,255,255,0.8);
+    transition: top 0.3s ease, color 0.3s ease;
+    z-index: 100;
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
+}
