@@ -13,9 +13,11 @@ function add(p, callback) {
     fs.readFile('.' + p, 'utf8', callback);
 }
 
-app.get("/", function (request, response) {
-    add("/index.html", function (err, data) {
-        response.write(data);
+app.get(/./, function (req, res) {
+    path=(req.url === "/")?"/index.html":req.url ;
+    add(path, function (err, data) {
+        if (err) res.send("ERROR: 404 - Page Not Found")
+        res.send(data);
     });
 })
 app.listen(80);
