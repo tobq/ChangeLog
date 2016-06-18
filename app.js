@@ -5,7 +5,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.post('/', function (req, res) {
-    res.send(req.body);
+    if(req.body.nm.toLowerCase() === "acyd" && req.body.pw === "ImGay") res.send(true);
+    else res.send(false);
 });
 
 app.get(/./, function (req, res) {
@@ -13,3 +14,5 @@ app.get(/./, function (req, res) {
     res.sendFile(path,{"root": __dirname});
 })
 app.listen(80);
+
+console.log(__dirname)

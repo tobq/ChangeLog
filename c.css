@@ -1,17 +1,18 @@
 * {
+    box-sizing: border-box;
     margin: 0px;
     position: relative;
 }
 form {
     vertical-align: middle;
-    padding: 3px;
+    padding: 0px 20px;
     position: absolute;
-    top: 0px;
+    top: -30px;
     bottom: 0px;
     left: 0px;
     right: 0px;
     margin: auto;
-    height: 150px;
+    height: 213px;
     max-width: 400px;
     width: 100%;
 }
@@ -20,7 +21,6 @@ body {
 }
 form > input {
     padding: 0px;
-    box-sizing: border-box;
     display: inline-block;
     text-indent: 18px;
     margin-top: 4px;
@@ -29,7 +29,7 @@ form > input {
     border: 2px solid rgba(0,0,0,0);
     border-bottom:none;
     outline: none;
-    transition: border 0.2s ease;
+    transition: all 0.2s ease;
 }
 .lip {
     background: #BBB;
@@ -44,25 +44,23 @@ form > input:hover, form > input:focus {
     border-bottom:none;
 }
 form > input[type="submit"]:hover, form > input[type="submit"]:focus {
-    border: 2px solid #777;
+    border: 2px solid #999;
     border-bottom:none;
+    background-color: #999;
 }
 form > input[type="submit"] {
-    background-color: #AAA
+    text-indent: 0px;
+    background-color: #AAA;
 }
 html {
     background: #272429;
 }
 #noti {
-    position: fixed;
-    top: -40px;
-    left: 0px;
-    right: 0px;
-    background: rgba(255,255,255,0.8);
-    transition: top 0.3s ease, color 0.3s ease;
-    z-index: 100;
-    color: #000;
-    text-align: center;
+    height: 30px;
+    width: 100%;
     font-size: 16px;
-    padding: 15px;
+    line-height: 30px;
+    transition: color 0.3s ease;
+    color: rgba(0,0,0,0);
+    text-align: center;
 }
