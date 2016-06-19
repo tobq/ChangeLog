@@ -1,12 +1,14 @@
 var express = require('express'),
+    accob={},
     app = express(),
     fs=require("fs"),
+    accob=JSON.parse(fs.readFileSync("./acc.txt","utf8")),
     bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.post('/', function (req, res) {
-    if(req.body.nm.toLowerCase() === "acyd" && req.body.pw === "ImGay") res.send(true);
+    if(accob[req.body.nm.toLowerCase()] === req.body.pw.toLowerCase()) res.send(true);
     else res.send(false);
 });
 

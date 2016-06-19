@@ -1,4 +1,3 @@
-var notit = false;
 function post() {
     $.ajax({
         type: "POST",
