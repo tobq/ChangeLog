@@ -8,7 +8,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.post('/', function (req, res) {
-    if(accob[req.body.nm.toLowerCase()] === req.body.nm) res.send(true);
+    console.log(req.body.nm.toLowerCase(),req.body.pw,accob[req.body.nm.toLowerCase()])
+    if(accob[req.body.nm.toLowerCase()] === req.body.pw) res.send(true);
     else res.send(false);
 });
 
